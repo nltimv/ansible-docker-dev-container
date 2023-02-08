@@ -19,6 +19,7 @@ RUN apt-get update \
         libffi-dev \
         libkrb5-dev \
         libssl-dev \
+        locales \
         lsb-release \
         net-tools \
         openssh-client \
@@ -49,5 +50,7 @@ RUN LATEST_COMPOSE_VERSION=$(curl -sSL "https://api.github.com/repos/docker/comp
  
 RUN pip install --upgrade pip \
     && pip install $pip_packages
+
+RUN locale-gen en_US.UTF-8
  
 CMD    ["/bin/bash"]
