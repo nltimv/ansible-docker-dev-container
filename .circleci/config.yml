@@ -5,7 +5,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: nltimv/ansible-terraform-dev-container
+      IMAGE_NAME: nltimv/ansible-docker-dev-container
       DOCKERHUB_USERNAME: nltimv
     docker:
       - image: docker:20
